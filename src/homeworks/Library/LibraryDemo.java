@@ -38,7 +38,7 @@ public class LibraryDemo implements Commands{
                      System.out.println("Please enter book id: ");
                      int id = scanner.nextInt();
                      scanner.nextLine();
-                     bookStorage.delateBookByIndex(id);
+                     bookStorage.delateBookById(id);
                      break;
                  default:
                      System.err.println("Wrong command: ");

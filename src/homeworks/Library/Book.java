@@ -8,13 +8,15 @@ public class Book {
     private String autorName;
     private double price;
     private int quantity;
+    private int idCounter = 1;
+    private int id;
 
     public Book(String title, String autorName, double price,int quantity) {
         this.title = title;
         this.autorName = autorName;
         this.price = price;
         this.quantity = quantity;
-
+        this.id = idCounter++ ;
     }
 
     public Book(){

@@ -67,12 +67,12 @@ public class BookStorage {
         return result;
     }
 
-    public void delateBookByIndex(int id) {
-        if (id < 0 || id >= size) {
+    public void delateBookById(int id) {
+        if (id < 1 || id >= size) {
             System.err.println("Invalid Id: ");
             return;
         }
-        for (int i = id; i < size - 1; i++) {
+        for (int i = id - 1; i < size - 1; i++) {
             books[i] = books[i + 1];
         }
         size--;
