@@ -68,14 +68,20 @@ public class BookStorage {
     }
 
     public void delateBookById(int id) {
-        if (id < 1 || id >= size) {
-            System.err.println("Invalid Id: ");
-            return;
+        boolean isFound = false;
+        for (int i = 0; i < size - 1; i++) {
+            if(books[i].getId() == id){
+                for(int j = i; j < size - 1; j++){
+                    books[j] = books[j+1];
+                }
+                size--;
+                isFound = true;
+                System.out.println("Book is delated: ");
+                break;
+            }
         }
-        for (int i = id - 1; i < size - 1; i++) {
-            books[i] = books[i + 1];
+        if(!isFound){
+            System.out.println("Book is not found: ");
         }
-        size--;
-        System.out.println("Book is delated: ");
     }
 }

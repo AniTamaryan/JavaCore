@@ -50,6 +50,10 @@ public class Book {
         return quantity;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
