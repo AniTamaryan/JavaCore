@@ -37,6 +37,7 @@ public class LibraryDemo implements Commands{
                  case DELATE_BOOK_BY_ID:
                      System.out.println("Please enter book id: ");
                      int id = scanner.nextInt();
+                     scanner.nextLine();
                      bookStorage.delateBookByIndex(id);
                      break;
                  default:
@@ -53,6 +54,7 @@ public class LibraryDemo implements Commands{
         double price = Double.parseDouble(scanner.nextLine());
         System.out.println("Please input the book quantity: ");
         int quantity = scanner.nextInt();
+        scanner.nextLine();
         Book book = new Book(bookTitle, autorName, price, quantity);
 
         bookStorage.add(book);
@@ -63,6 +65,7 @@ public class LibraryDemo implements Commands{
         System.out.println("Enter the range of a price: ");
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
+        scanner.nextLine();
         Book[] result = bookStorage.searchBookByPrice(num1, num2);
 
         if (result.length == 0) {
