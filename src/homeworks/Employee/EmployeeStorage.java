@@ -40,10 +40,15 @@ public class EmployeeStorage {
     }
 
     public void searchByCompany(String keyword) {
+        boolean isFound = false;
         for (int i = 0; i < size; i++){
             if(employees[i].getCompany().toLowerCase().contains(keyword)){
                 System.out.println(employees[i]);
+                isFound = true;
             }
+        }
+        if(!isFound) {
+            System.out.println("No employee found : ");
         }
     }
 }
